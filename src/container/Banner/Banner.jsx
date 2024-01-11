@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import treeLeft from '../../assets/tree-left.png';
 import treeRight from '../../assets/tree-right.png';
 import gateLeft from '../../assets/gate-left.png';
@@ -7,14 +7,28 @@ import grass from '../../assets/grass.png';
 
 
 const Banner = () => {
+    const text = useRef();
+    const treeLeftRef = useRef();
+    const treeRightRef = useRef();
+    const gateLeftRef = useRef();
+    const gateRightRef = useRef();
+    window.addEventListener('scroll', () => {
+        let value = window.scrollY;
+
+        text.current.style.marginTop = value * 2.5 + 'px';
+        treeLeftRef.current.style.left = value * -1.5 + 'px';
+        treeRightRef.current.style.left = value * 1.5 + 'px';
+        gateLeftRef.current.style.left = value * 0.5 + 'px';
+        gateRightRef.current.style.left = value * -0.5 + 'px';
+    })
     return (
         <>
             <div className="banner">
-                <h2 id="text">Parallax Website</h2>
-                <img src={treeLeft} alt="" id="tree-left" />
-                <img src={treeRight} alt="" id="tree-right" />
-                <img src={gateLeft} alt="" id="gate-left" />
-                <img src={gateRight} alt="" id="gate-right" />
+                <h2 id="text" ref={text}>Parallax Website</h2>
+                <img src={treeLeft} ref={treeLeftRef} alt="" id="tree-left" />
+                <img src={treeRight} ref={treeRightRef} alt="" id="tree-right" />
+                <img src={gateLeft} ref={gateLeftRef} alt="" id="gate-left" />
+                <img src={gateRight} ref={gateRightRef} alt="" id="gate-right" />
                 <img src={grass} alt="" id="grass" />
             </div>
             <div className="sec">
