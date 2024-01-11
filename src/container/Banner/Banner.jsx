@@ -4,7 +4,7 @@ import treeRight from '../../assets/tree-right.png';
 import gateLeft from '../../assets/gate-left.png';
 import gateRight from '../../assets/gate-right.png';
 import grass from '../../assets/grass.png';
-
+import './Banner.css';
 
 const Banner = () => {
     const text = useRef();
@@ -23,7 +23,7 @@ const Banner = () => {
     })
     return (
         <>
-            <div className="banner">
+            <div className="parallax">
                 <h2 id="text" ref={text}>Parallax Website</h2>
                 <img src={treeLeft} ref={treeLeftRef} alt="" id="tree-left" />
                 <img src={treeRight} ref={treeRightRef} alt="" id="tree-right" />
