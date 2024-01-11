@@ -28,16 +28,20 @@
 
 .parallax img#gate-left {
     position: fixed;
+    height: 100%;
     transform: translateX(-282px);
 }
 
  
 .parallax img#gate-right {
     position: fixed;
+    height: 100%;
     transform: translateX(305px);
 }
 
-
+.parallax img#grass {
+    height: 100%;
+}
 
 .sec{
     position: relative;
