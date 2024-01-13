@@ -4,10 +4,10 @@
     justify-content: center;    
     align-items: center;    
     height: calc(100vh);
-    background: url('../../assets/background.png') no-repeat;
+    /* background: url('../../assets/bg1.jpg') no-repeat;
     background-size: cover; 
-    background-position: center;    
-    background-attachment: fixed;
+    background-position: center;
+    background-attachment: fixed; */
     overflow: hidden;
 }
 
@@ -42,6 +42,11 @@
 
 .parallax img#grass {
     height: 100%;
+}
+
+.parallax img#bgImage{
+    position: fixed;
+    z-index: -1;
 }
 
 .sec{
