@@ -4,6 +4,7 @@ import treeRight from '../../assets/tree-right.png';
 import gateLeft from '../../assets/gate-left.png';
 import gateRight from '../../assets/gate-right.png';
 import grass from '../../assets/grass.png';
+import bg1 from '../../assets/bg1.jpg';
 import './Banner.css';
 
 const Banner = () => {
@@ -32,6 +33,7 @@ const Banner = () => {
                 <img src={gateLeft} ref={gateLeftRef} alt="" id="gate-left" />
                 <img src={gateRight} ref={gateRightRef} alt="" id="gate-right" />
                 <img src={grass} alt="" id="grass" />
+                <img src={bg1} id="bgImage"/>
             </div>
             <div className="sec">
                 <h2>Parllax scrolling website</h2>
