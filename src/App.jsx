@@ -11,6 +11,8 @@ function App() {
 
   return (
     <>
+     <Navbar />
+      <Banner />
       <Back/>
     </>
   )
