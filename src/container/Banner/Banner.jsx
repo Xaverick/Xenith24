@@ -1,4 +1,5 @@
-import { useRef } from "react";
+import { React,useRef } from "react";
+
 import treeLeft from '../../assets/tree-left.png';
 import treeRight from '../../assets/tree-right.png';
 import gateLeft from '../../assets/gate-left.png';
