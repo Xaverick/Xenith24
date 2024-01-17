@@ -1,0 +1,231 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Courier New', Courier, monospace;
+  }
+  
+  body{
+    background-image: url(/src/assets/events-bg.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    /**/
+    margin: 0;
+    padding: 0;
+  }
+  .events{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    justify-content: center;
+    /* align-items: center; */
+    perspective: 1000px;
+  }
+  
+  .row{
+    display: flex;
+    justify-content: space-around;
+    margin: 10% 30% 8% 20%;
+  }
+  
+  .book{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /***/    
+    margin-bottom: 20px;
+  }
+  
+  .book:hover .cover{
+    transform: rotateX(10deg) rotateY(-180deg);
+  }
+  
+  .book:hover .page{
+    transform: rotateX(10deg) rotateY(-180deg);
+    z-index: 2;
+  }
+  
+  .cover{
+    z-index: 1;
+    transition: all 2s;
+  }
+  
+  .back-cover{
+    z-index: -2;
+  }
+  
+  .cover, .back-cover{
+    /* height: 200px;
+    width: 173px; */
+    height: 28vh;
+    width: 11.5vw;
+    background: #2f0404;
+    background-image: url(/src/assets/events-cover.png);
+    border-radius: 0% 8% 8% 0%;
+    position: absolute;
+    box-shadow: 1px 1px 10px rgb(36, 3, 3);
+    transform: rotateX(10deg);
+    transform-origin: center left;
+  }
+  
+  .page, .last-page{
+    /* height: 190px;
+    width: 165px; */
+    height: 26vh;
+    width: 11vw;
+    background: white;
+    position: absolute;
+    border-radius: 0% 8% 8% 0%;
+    transform: rotateX(10deg);
+    transform-origin: center left;
+    z-index: -1;
+  }
+  
+  .page:nth-child(2){
+    transition-duration: 3s;
+  }
+  .page:nth-child(3){
+    transition-duration: 2.6s;
+  }
+  .page:nth-child(4){
+    transition-duration: 2.2s;
+  }
+  .page:nth-child(5){
+    transition-duration: 1.8s;
+  }
+  .page:nth-child(6){
+    transition-duration: 1.4s;
+  }
+  
+  .book:hover .page:nth-child(2)
+  {
+    transition-duration: 4s;
+  }
+  .book:hover .page:nth-child(3)
+  {
+    transition-duration: 3.6s;
+  }
+  .book:hover .page:nth-child(4)
+  {
+    transition-duration: 3.2s;
+  }
+  .book:hover .page:nth-child(5)
+  {
+    transition-duration: 2.8s;
+  }
+  .book:hover .page:nth-child(6)
+  {
+    transition-duration: 2.4s;
+  }
+  
+  .last-page h2,
+  .last-page p{
+    text-align: center;
+    font-size: 1em;
+    padding: 1em;
+  }
+  /* .last-page img{
+    width: 100px;
+    display: block;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+    z-index: -1;
+  } */
+  
+  @media screen and (max-width: 1030px) {
+    .book {
+        margin: 5% 20%;
+    }
+  
+    .cover, .back-cover {
+        height: 160px;
+        width: 140px;
+    }
+  
+    .page, .last-page{
+        height: 150px;
+        width: 135px;
+    }
+  
+    .last-page h2,
+    .last-page p {
+        font-size: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 770px) {
+    
+    .book {
+        margin: 5% 20% 5% 20%;
+    }
+  
+    .cover, .back-cover {
+        height: 120px;
+        width: 100px;
+    }
+  
+    .page, .last-page{
+        height: 118px;
+        width: 98px;
+    }
+  
+    .last-page h2,
+    .last-page p {
+        font-size: 12px;
+    }
+  } 
+  @media screen and (max-width: 430px) {
+    body{
+        background-image: url(/src/assets/mobile-bg.png);
+        margin-left: -33px;
+    }
+  
+    .book {
+        margin: 12% 23%;
+    }
+  
+    .cover, .back-cover {
+        height: 90px;
+        width: 80px;
+        background-image: url(/src/assets/mobile-cover.png);
+        opacity: 100%;
+    }
+  
+    .page, .last-page{
+        height: 89px;
+        width: 78px;
+    }
+  
+    .last-page h2,
+    .last-page p {
+        font-size: 56%;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    body{
+        margin-left: -37px;
+    }
+  
+    .book {
+        margin: 17% 27%;
+    }
+  
+    .cover, .back-cover {
+        height: 90px;
+        width: 80px;
+    }
+  
+    .page, .last-page{
+        height: 89px;
+        width: 78px;
+    }
+  
+    .last-page h2,
+    .last-page p {
+        font-size: 56%;
+    }
+  }
